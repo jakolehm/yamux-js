@@ -212,7 +212,7 @@ export class Session extends Transform {
     }
 
     // Open is used to create a new stream as a Duplex
-    public open(): Duplex {
+    public open(): Stream {
         const stream = new Stream(this, this.nextStreamID, STREAM_STATES.Init);
         this.nextStreamID += 2;
 
